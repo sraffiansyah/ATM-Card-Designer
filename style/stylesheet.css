@@ -1,3 +1,9 @@
+/* =============================================
+   ATM Generator — By Vyy
+   stylesheet.css
+   ============================================= */
+
+/* ── Reset & Root ─────────────────────────── */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -19,7 +25,7 @@ html, body {
     overflow-x: hidden;
 }
 
-/* LOADING */
+/* ── Loading Screen ───────────────────────── */
 #loading-screen {
     position: fixed;
     inset: 0;
@@ -56,7 +62,7 @@ html, body {
     animation: fadeUp .8s ease forwards .3s;
     text-align: center;
     line-height: 1.5;
-    text-shadow: 0 0 30px rgba(255,255,255,.25);
+    text-shadow: 0 0 30px rgba(255, 255, 255, .25);
 }
 
 .welcome-title span {
@@ -68,13 +74,7 @@ html, body {
     font-weight: 400;
 }
 
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-/* Loading anim */
+/* ── Loading Animation ────────────────────── */
 .loader {
     --main-size: 2.8em;
     --text-color: #ffffff;
@@ -109,69 +109,71 @@ html, body {
 
 .loader .text:nth-child(1) {
     clip-path: polygon(0% 0%, 11.11% 0%, 11.11% 100%, 0% 100%);
-    font-size: calc(var(--main-size)/20);
+    font-size: calc(var(--main-size) / 20);
     margin-left: -2.1em;
     opacity: .6;
 }
 
 .loader .text:nth-child(2) {
     clip-path: polygon(11.11% 0%, 22.22% 0%, 22.22% 100%, 11.11% 100%);
-    font-size: calc(var(--main-size)/16);
+    font-size: calc(var(--main-size) / 16);
     margin-left: -0.98em;
     opacity: .7;
 }
 
 .loader .text:nth-child(3) {
     clip-path: polygon(22.22% 0%, 33.33% 0%, 33.33% 100%, 22.22% 100%);
-    font-size: calc(var(--main-size)/13);
+    font-size: calc(var(--main-size) / 13);
     margin-left: -0.33em;
     opacity: .8;
 }
 
 .loader .text:nth-child(4) {
     clip-path: polygon(33.33% 0%, 44.44% 0%, 44.44% 100%, 33.33% 100%);
-    font-size: calc(var(--main-size)/11);
+    font-size: calc(var(--main-size) / 11);
     margin-left: -0.05em;
     opacity: .9;
 }
 
 .loader .text:nth-child(5) {
     clip-path: polygon(44.44% 0%, 55.55% 0%, 55.55% 100%, 44.44% 100%);
-    font-size: calc(var(--main-size)/10);
+    font-size: calc(var(--main-size) / 10);
     margin-left: 0em;
     opacity: 1;
 }
 
 .loader .text:nth-child(6) {
     clip-path: polygon(55.55% 0%, 66.66% 0%, 66.66% 100%, 55.55% 100%);
-    font-size: calc(var(--main-size)/11);
+    font-size: calc(var(--main-size) / 11);
     margin-left: 0.05em;
     opacity: .9;
 }
 
 .loader .text:nth-child(7) {
     clip-path: polygon(66.66% 0%, 77.77% 0%, 77.77% 100%, 66.66% 100%);
-    font-size: calc(var(--main-size)/13);
+    font-size: calc(var(--main-size) / 13);
     margin-left: 0.33em;
     opacity: .8;
 }
 
 .loader .text:nth-child(8) {
     clip-path: polygon(77.77% 0%, 88.88% 0%, 88.88% 100%, 77.77% 100%);
-    font-size: calc(var(--main-size)/16);
+    font-size: calc(var(--main-size) / 16);
     margin-left: 0.98em;
     opacity: .7;
 }
 
 .loader .text:nth-child(9) {
     clip-path: polygon(88.88% 0%, 100% 0%, 100% 100%, 88.88% 100%);
-    font-size: calc(var(--main-size)/20);
+    font-size: calc(var(--main-size) / 20);
     margin-left: 2.1em;
     opacity: .6;
 }
 
 .loader .text span {
-    animation: scrolling 2s cubic-bezier(0.1,0.6,0.9,0.4) infinite, shadow 2s cubic-bezier(0.1,0.6,0.9,0.4) infinite;
+    animation:
+        scrolling 2s cubic-bezier(0.1, 0.6, 0.9, 0.4) infinite,
+        shadow 2s cubic-bezier(0.1, 0.6, 0.9, 0.4) infinite;
 }
 
 .loader .text:nth-child(1) span {
@@ -237,7 +239,7 @@ html, body {
     justify-content: center;
     overflow: hidden;
     height: .05em;
-    width: calc(var(--main-size)/2);
+    width: calc(var(--main-size) / 2);
     margin-top: .9em;
     border-radius: .05em;
 }
@@ -259,39 +261,34 @@ html, body {
     background-color: var(--text-color);
     border-radius: .05em;
     transform: translateX(-90%);
-    animation: wobble 2s cubic-bezier(0.5,0.8,0.5,0.2) infinite;
+    animation: wobble 2s cubic-bezier(0.5, 0.8, 0.5, 0.2) infinite;
+}
+
+/* ── Keyframes ────────────────────────────── */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes wobble {
-    0% {
-        transform: translateX(-90%);
-    }
-    50% {
-        transform: translateX(90%);
-    }
-    100% {
-        transform: translateX(-90%);
-    }
+    0%   { transform: translateX(-90%); }
+    50%  { transform: translateX(90%); }
+    100% { transform: translateX(-90%); }
 }
 
 @keyframes scrolling {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(100%);
-    }
+    0%   { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
 }
 
 @keyframes shadow {
-    0% {
-        background-position: -98% 0;
-    }
-    100% {
-        background-position: 102% 0;
-    }
+    0%   { background-position: -98% 0; }
+    100% { background-position: 102% 0; }
 }
-/* MAIN PAGE */
+
+/* ── Main Page ────────────────────────────── */
 #main-page {
     opacity: 0;
     visibility: hidden;
@@ -305,6 +302,7 @@ html, body {
     visibility: visible;
 }
 
+/* ── Site Header ──────────────────────────── */
 .site-header {
     text-align: center;
     padding: 50px 20px 30px;
@@ -329,7 +327,8 @@ html, body {
     color: #fff;
     font-weight: 700;
 }
-/* CARD */
+
+/* ── Card Preview ─────────────────────────── */
 .card-preview-section {
     display: flex;
     justify-content: center;
@@ -348,15 +347,19 @@ html, body {
     border-radius: 18px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 30px 80px rgba(0,0,0,.7), 0 2px 4px rgba(255,255,255,.05) inset;
-    transition: transform .5s cubic-bezier(.25,.8,.25,1), box-shadow .5s ease;
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, .7),
+        0 2px 4px rgba(255, 255, 255, .05) inset;
+    transition: transform .5s cubic-bezier(.25, .8, .25, 1), box-shadow .5s ease;
     cursor: default;
     background: #111;
 }
 
 .atm-card:hover {
     transform: perspective(800px) rotateY(-6deg) rotateX(4deg) scale(1.04);
-    box-shadow: 0 50px 100px rgba(0,0,0,.8), 0 2px 4px rgba(255,255,255,.08) inset;
+    box-shadow:
+        0 50px 100px rgba(0, 0, 0, .8),
+        0 2px 4px rgba(255, 255, 255, .08) inset;
 }
 
 .card-gradient {
@@ -380,7 +383,7 @@ html, body {
     position: absolute;
     inset: 0;
     border-radius: 18px;
-    background: linear-gradient(135deg, rgba(255,255,255,.12) 0%, transparent 50%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, .12) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -393,10 +396,21 @@ html, body {
     justify-content: space-between;
 }
 
+/* Card Top */
 .card-top {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+}
+
+.chip-offset {
+    margin-top: 10px;
+    margin-left: 8px;
+}
+
+.chip-wrap {
+    width: 42px;
+    height: 33px;
 }
 
 .card-top-right {
@@ -410,11 +424,18 @@ html, body {
     font-family: 'Orbitron', monospace;
     font-size: .5rem;
     letter-spacing: .22em;
-    color: rgba(255,255,255,.75);
+    color: rgba(255, 255, 255, .75);
     font-weight: 700;
     text-transform: uppercase;
 }
 
+.contactless-wrap {
+    width: 22px;
+    height: 22px;
+    transform: rotate(90deg);
+}
+
+/* Card Mid */
 .card-mid {
     display: flex;
     flex-direction: column;
@@ -422,20 +443,28 @@ html, body {
 }
 
 .card-number-display {
-    font-family: 'Space Mono', monospace;
+    font-family: "Courier Prime", monospace;
     font-size: clamp(.85rem, 2.5vw, 1.05rem);
     letter-spacing: .18em;
     color: #fff;
-    text-shadow: 0 1px 6px rgba(0,0,0,.5);
+    text-shadow: 0 1px 6px rgba(0, 0, 0, .5);
 }
 
+/* Card Bottom */
 .card-bottom {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
 }
 
-.card-holder-block, .card-expiry-block {
+.card-bottom-left {
+    display: flex;
+    gap: 18px;
+    align-items: flex-end;
+}
+
+.card-holder-block,
+.card-expiry-block {
     display: flex;
     flex-direction: column;
     gap: 2px;
@@ -449,7 +478,7 @@ html, body {
     font-family: 'Space Mono', monospace;
     font-size: .4rem;
     letter-spacing: .2em;
-    color: rgba(255,255,255,.45);
+    color: rgba(255, 255, 255, .45);
     text-transform: uppercase;
 }
 
@@ -461,6 +490,7 @@ html, body {
     text-transform: uppercase;
 }
 
+/* Mastercard Logo */
 .mc-logo {
     display: flex;
 }
@@ -479,24 +509,15 @@ html, body {
     background: #f79e1b;
     margin-left: -13px;
 }
-/* CHIP — pure SVG style via CSS */
-.chip-wrap {
-    width: 42px;
-    height: 33px;
+
+/* VISA Logo */
+.visa-logo-el {
+    display: none;
+    height: 28px;
+    width: auto;
 }
 
-/* CONTACTLESS — pure SVG arcs */
-.contactless-wrap {
-    width: 22px;
-    height: 22px;
-}
-
-/* VISA text SVG */
-.visa-logo-wrap {
-    height: 22px;
-}
-
-/* THEMES */
+/* ── Theme Selector ───────────────────────── */
 .themes-section {
     max-width: 540px;
     margin: 0 auto 40px;
@@ -541,7 +562,7 @@ html, body {
 
 .theme-swatch.active {
     border-color: #fff;
-    box-shadow: 0 0 0 3px rgba(255,255,255,.15);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, .15);
     transform: scale(1.12);
 }
 
@@ -556,13 +577,14 @@ html, body {
     color: #fff;
     opacity: 0;
     transition: opacity .2s;
-    text-shadow: 0 1px 3px rgba(0,0,0,.5);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
 }
 
 .theme-swatch.active::after {
     opacity: 1;
 }
-/* EDITOR */
+
+/* ── Editor ───────────────────────────────── */
 .editor-section {
     max-width: 540px;
     margin: 0 auto;
@@ -614,7 +636,7 @@ html, body {
 
 .field-group input:focus {
     border-color: #555;
-    box-shadow: 0 0 0 3px rgba(255,255,255,.04);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, .04);
 }
 
 .field-group input::placeholder {
@@ -628,7 +650,7 @@ html, body {
     letter-spacing: .05em;
 }
 
-/* Logo selector buttons */
+/* ── Logo Selector ────────────────────────── */
 .logo-selector {
     display: flex;
     gap: 8px;
@@ -659,21 +681,72 @@ html, body {
     color: #ccc;
 }
 
+/* ── Download Button ──────────────────────── */
+.download-wrap {
+    margin-top: 8px;
+}
+
+.download-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+    border: 1px solid #444;
+    border-radius: 10px;
+    color: #fff;
+    font-family: 'Space Mono', monospace;
+    font-size: .72rem;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background .2s, border-color .2s, transform .15s;
+}
+
+.download-btn:hover {
+    border-color: #888;
+    background: linear-gradient(135deg, #333, #222);
+}
+
+.download-btn:active {
+    transform: scale(0.97);
+}
+
+.download-btn:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+.helper-text-center {
+    font-size: .5rem;
+    font-family: 'Space Mono', monospace;
+    color: #444;
+    letter-spacing: .05em;
+    text-align: center;
+}
+
+/* ── Responsive ───────────────────────────── */
 @media (max-width: 420px) {
     :root {
         --card-w: 320px;
         --card-h: 200px;
     }
+
     .card-number-display {
         font-size: .78rem;
         letter-spacing: .1em;
     }
+
     .card-value {
         font-size: .6rem;
     }
+
     .editor-grid {
         grid-template-columns: 1fr;
     }
+
     .editor-grid .field-full {
         grid-column: 1;
     }
@@ -684,6 +757,7 @@ html, body {
         --card-w: 420px;
         --card-h: 265px;
     }
+
     .card-number-display {
         font-size: 1.15rem;
     }

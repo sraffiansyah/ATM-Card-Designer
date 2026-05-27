@@ -1,16 +1,24 @@
 /* =============================================
-    ATM Generator — By Vyy
-    script.js
+   ATM Generator — By Vyy
+   script.js
    ============================================= */
 
 /* ── Theme Data ───────────────────────────── */
 const themes = [
+    // ── Original ──────────────────────────────
     { name: 'Midnight', gradient: 'linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%)' },
     { name: 'Ocean',    gradient: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%)' },
     { name: 'Obsidian', gradient: 'linear-gradient(135deg, #000000 0%, #434343 100%)' },
     { name: 'Rose',     gradient: 'linear-gradient(135deg, #c06c84 0%, #6c3483 50%, #355c7d 100%)' },
     { name: 'Sakura',   gradient: 'linear-gradient(135deg, #f8cdda 0%, #c06c84 40%, #7b2d8b 100%)' },
     { name: 'Aurora',   gradient: 'linear-gradient(135deg, #0b3d0b 0%, #1a472a 30%, #2e7d32 60%, #00695c 100%)' },
+    // ── Premium Bank ──────────────────────────
+    { name: 'Navy',     gradient: 'linear-gradient(135deg, #0a0f2e 0%, #0d1b4b 45%, #112266 100%)' },
+    { name: 'Prestige', gradient: 'linear-gradient(135deg, #1a0a0a 0%, #4a0e0e 50%, #6b1414 100%)' },
+    { name: 'Emerald',  gradient: 'linear-gradient(135deg, #001a0d 0%, #003d1f 45%, #005a2b 100%)' },
+    { name: 'Slate',    gradient: 'linear-gradient(135deg, #0d1117 0%, #1c2333 45%, #2d3748 100%)' },
+    { name: 'Royal',    gradient: 'linear-gradient(135deg, #1a0533 0%, #2d0a5c 45%, #3d1278 100%)' },
+    { name: 'Onyx',     gradient: 'linear-gradient(160deg, #0a0a0a 0%, #1a1a1a 40%, #111827 70%, #0f172a 100%)' },
 ];
 
 /* ── DOM References ───────────────────────── */
@@ -114,8 +122,8 @@ async function downloadCard() {
     card.style.transform = '';
     btn.innerHTML = `
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
+             stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
             <polyline points="7 10 12 15 17 10"/>
             <line x1="12" y1="15" x2="12" y2="3"/>
